@@ -1,0 +1,18 @@
+###
+POST http://localhost:8000/characters/create
+Content-Type: application/json
+
+{
+    "name": "Newius Curlius",
+    "character_class": "Rogue",
+    "race": "Elf",
+    "owner": "GM",
+    "strength": 11,
+    "dexterity": 11,
+    "constitution": 11,
+    "intelligence": 11,
+    "wisdom": 11,
+    "charisma": 11
+}
+
+###

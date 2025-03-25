@@ -1,0 +1,40 @@
+// database
+datasource db {
+  provider = "sqlite"
+  url      = "file:database.db"
+}
+
+// generator
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = 5
+}
+
+model Character {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  // TODO: rich user support
+  character_class String  @map("class")
+  race            String
+  level           Int     @default(1)
+  experience      Int     @default(0)
+  owner           String?
+  background      String?
+  alignment       String?
+
+  // Core stats
+  strength     Int
+  dexterity    Int
+  constitution Int
+  intelligence Int
+  wisdom       Int
+  charisma     Int
+
+  // Saves and modifiers (optional now, but ready for calc)
+  proficiencyBonus Int @default(2)
+
+  // Metadata
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
