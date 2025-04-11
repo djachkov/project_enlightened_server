@@ -1,0 +1,11 @@
+{
+    "customizations": {
+      "codespaces": {
+        "repositories": {
+          "djachkov/project_enlightened_ui": {
+            "permissions": "write-all"
+          }
+        }
+      }
+    }
+  }
