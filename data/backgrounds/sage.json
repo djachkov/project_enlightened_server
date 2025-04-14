@@ -1,0 +1,25 @@
+{
+    "name": "Sage",
+    "description": "You have spent years studying the arcane arts, honing your mind and body to become a master of magic. You are a scholar, a researcher, and a practitioner of the mystical arts. You have a deep understanding of the forces that govern the universe, and you can wield them with precision and power.",
+    "ability_scores": [
+        "INT",
+        "WIS",
+        "CON"
+    ],
+    "feat": "Magic Initiate",
+    "skill_proficiency": [
+        "ARCANA",
+        "HISTORY"
+    ],
+    "tool_proficiency": [
+        "Calligrapher's supplies"
+    ],
+    "equipment": [
+        "Quarterstaff",
+        "Calligrapher's supplies",
+        "Book (History)",
+        "Parchment (8)",
+        "Robe",
+        "8GP"
+    ]
+}

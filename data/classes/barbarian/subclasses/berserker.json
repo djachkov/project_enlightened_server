@@ -1,0 +1,28 @@
+{
+    "name": "Path of the Berserker",
+    "description": "TODO",
+    "features": [
+        {
+            "name": "Frenzy",
+            "description": "When you enter a rage, you can choose to go into a frenzy. If you do so, you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion.",
+            "level": 3
+        },
+        {
+            "name": "Mindless Rage",
+            "description": "You cannot be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.",
+            "level": 6
+
+        },
+        {
+            "name": "Retaliation",
+            "description": "TODO",
+            "level": 10
+        
+        },
+        {
+            "name": "Intimidating Presence",
+            "description": "You can use your action to frighten someone. The target must make a Wisdom saving throw against your Barbarian spell save DC. On a failed save, the target is frightened for 1 minute or until it takes damage. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.",
+            "level": 14
+        }
+    ]
+}

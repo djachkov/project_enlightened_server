@@ -1,0 +1,30 @@
+{
+    "name": "Barbarian",
+    "short_description": "A fierce warrior of the wilds, the Barbarian is a master of brute strength and primal fury.",
+    "primary_ability_score": "STR",
+    "hit_die": 12,
+    "saving_throws": [
+        "STR",
+        "CON"
+    ],
+    "skill_proficiency": [
+        "ATHLETICS",
+        "SURVIVAL"
+    ],
+    "weapon_proficiency": [
+        "simple weapons",
+        "martial weapons"
+    ],
+    "armor_training": [
+        "light armor",
+        "medium armor",
+        "shields"
+    ],
+    "equipment": [
+        "Greataxe",
+        "Handaxe",
+        "Javelin",
+        "Explorer's Pack",
+        "Traveler's Clothes"
+    ]
+}

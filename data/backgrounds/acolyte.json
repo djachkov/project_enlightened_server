@@ -1,0 +1,25 @@
+{
+    "name": "Acolyte",
+    "ability_scores": [
+        "INT",
+        "WIS",
+        "CHA"
+    ],
+    "description": "",
+    "feat": "Magic Initiate",
+    "skill_proficiency": [
+        "INSIGHT",
+        "RELIGION"
+    ],
+    "tool_proficiency": [
+        "Calligrapher's supplies"
+    ],
+    "equipment": [
+        "Book (Prayers)",
+        "Calligrapher's supplies",
+        "Holy Symbol",
+        "Parchment (10)",
+        "Robe",
+        "8GP"
+    ]
+}

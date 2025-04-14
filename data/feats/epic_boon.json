@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Boon of Combat Prowess",
+        "prerequisite": {
+            "type": "level",
+            "value": 19
+        },
+        "description": "You gain the following benefits.\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\nPeerless Aim. When you miss with an attack roll, you can hit instead. Once you use this benefit, you can’t use it again until the start of your next turn."
+    },
+    {
+        "name": "Boon of Dimensional Travel",
+        "prerequisite": {
+            "type": "level",
+            "value": 19
+        },
+        "description": "You gain the following benefits.\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\nBlink Steps. Immediately after you take the Attack action or the Magic action, you can teleport up to 30 feet to an unoccupied space you can see."
+    },
+    {
+        "name": "Boon of Fate",
+        "prerequisite": {
+            "type": "level",
+            "value": 19
+        },
+        "description": "You gain the following benefits.\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\nImprove Fate. When you or another creature within 60 feet of you succeeds on or fails a D20 Test, you can roll 2d4 and apply the total rolled as a bonus or penalty to the d20 roll. Once you use this benefit, you can’t use it again until you roll Initiative or finish a Short or Long Rest."
+    },
+    {
+        "name": "Boon of Irresistible Offense",
+        "prerequisite": {
+            "type": "level",
+            "value": 19
+        },
+        "description": "You gain the following benefits.\nAbility Score Increase. Increase your Strength or Dexterity score by 1, to a maximum of 30.\nOvercome Defenses. The Bludgeoning, Piercing, and Slashing damage you deal always ignores Resistance.\nOverwhelming Strike. When you roll a 20 on the d20 for an attack roll, you can deal extra damage to the target equal to the ability score increased by this feat. The extra damage’s type is the same as the attack’s type."
+    },
+    {
+        "name": "Boon of the Night Spirit",
+        "prerequisite": {
+            "type": "level",
+            "value": 19
+        },
+        "description": "You gain the following benefits.\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\nMerge with Shadows. While within Dim Light or Darkness, you can give yourself the Invisible condition as a Bonus Action. The condition ends on you immediately after you take an action, a Bonus Action, or a Reaction.\nShadowy Form. While within Dim Light or Darkness, you have Resistance to all damage except Psychic and Radiant."
+    },
+    {
+        "name": "Boon of Truesight",
+        "prerequisite": {
+            "type": "level",
+            "value": 19
+        },
+        "description": "You gain the following benefits.\nAbility Score Increase. Increase one ability score of your choice by 1, to a maximum of 30.\nTruesight. You have Truesight with a range of 60 feet."
+    }
+]

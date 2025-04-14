@@ -1,0 +1,25 @@
+{
+    "name": "Criminal",
+    "description": "You have a secret life as a criminal or a member of an underground organization. You are not necessarily a bad person, but you are comfortable in the company of thieves and scoundrels. You know how to hide and move in the shadows, and you can get away with things that others cannot.",
+    "ability_scores": [
+        "DEX",
+        "INT",
+        "CON"
+    ],
+    "feat": "Alert",
+    "skill_proficiency": [
+        "SLEIGHT_OF_HAND",
+        "STEALTH"
+    ],
+    "tool_proficiency": [
+        "Thieves' tools"
+    ],
+    "equipment": [
+        "Dagger (2)",
+        "Thieves' tools",
+        "Crowbar",
+        "Pouch (2)",
+        "Traveler's Clothes",
+        "16GP"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "name": "Soldier",
+    "ability_scores": [
+        "STR",
+        "DEX",
+        "CON"
+    ],
+    "description": "You began training for war as soon as you reached adulthood and carry precious few memories of life before you took up arms. Battle is in your blood. Sometimes you catch yourself reflexively performing the basic fighting exercises you learned first. Eventually, you put that training to use on the battlefield, protecting the realm by waging war.\nYou grew up on the streets surrounded by similarly ill-fated castoffs, a few of them friends and a few of them rivals. You slept where you could and did odd jobs for food. At times, when the hunger became unbearable, you resorted to theft. Still, you never lost your pride and never abandoned hope. Fate is not yet finished with you.",
+    "feat": "Savage Attacker",
+    "skill_proficiency": [
+        "ATHLETICS",
+        "INTIMIDATION"
+    ],
+    "tool_proficiency": [
+        "gaming set"
+    ],
+    "equipment": [
+        "gaming set",
+        "Healer's Kit",
+        "Traveler's Clothes",
+        "Spear",
+        "Shortbow",
+        "20 Arrows",
+        "14GP"
+    ]
+}
