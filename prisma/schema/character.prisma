@@ -1,0 +1,67 @@
+model Character {
+    id   Int    @id @default(autoincrement())
+    name String
+
+    // TODO: rich user support
+    character_class String  @map("class")
+    race            String
+    level           Int     @default(1)
+    experience      Int     @default(0)
+    owner           String?
+    background      String?
+    alignment       String?
+
+    // Core stats
+    strength     Int
+    dexterity    Int
+    constitution Int
+    intelligence Int
+    wisdom       Int
+    charisma     Int
+
+    // Saves and modifiers (optional now, but ready for calc)
+    proficiencyBonus Int @default(2)
+
+    // Metadata
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model CharacterBackground {
+    id   Int    @id @default(autoincrement())
+    name String
+
+    description String
+
+    // TODO: relationships with Feats
+    feat   Feat @relation(fields: [featId], references: [id])
+    featId Int
+
+    ability_scores    Ability[]
+    skill_proficiency Skill[]
+    tool_proficiency  String[]
+
+    // TODO Relationship with items
+    equipment String[]
+
+    homebrew  Boolean  @default(false)
+}
+
+enum FeatCategory {
+    ORIGIN
+    GENERAL
+    FIGHTING_STYLE
+    EPIC_BOON
+}
+
+model Feat {
+    id            Int          @id @default(autoincrement())
+    name          String
+    description   String
+    feat_category FeatCategory
+    repeatable     Boolean @default(false)
+    homebrew      Boolean      @default(false)
+
+    effects             Json?
+    CharacterBackground CharacterBackground[]
+}

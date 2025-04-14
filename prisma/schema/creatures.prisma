@@ -1,0 +1,49 @@
+model CreatureSpecie {
+    id       Int     @id @default(autoincrement())
+    name     String
+    playable Boolean @default(false)
+
+    description String
+    homebrew    Boolean @default(false)
+
+    // TODO creature type as a separate entity
+    creature_type String
+    size          CreatureSize @default(MEDIUM)
+    speed         Int
+
+    traits            CreaturesTraits[]
+    CreatureSubSpecie CreatureSubSpecie[]
+}
+
+model CreatureSubSpecie {
+    id   Int    @id @default(autoincrement())
+    name String
+
+    description String
+
+    parentSpecie   CreatureSpecie    @relation(fields: [parentSpecieId], references: [id])
+    parentSpecieId Int
+    traits         CreaturesTraits[]
+}
+
+model CreatureTrait {
+    id          Int     @id @default(autoincrement())
+    name        String
+    description String
+    homebrew    Boolean @default(false)
+
+    effects   Json?
+    creatures CreaturesTraits[]
+}
+
+model CreaturesTraits {
+    creatureSpecie   CreatureSpecie @relation(fields: [creatureSpecieId], references: [id])
+    creatureSpecieId Int
+
+    creatureTrait       CreatureTrait      @relation(fields: [creatureTraitId], references: [id])
+    creatureTraitId     Int
+    CreatureSubspecie   CreatureSubspecie? @relation(fields: [creatureSubspecieId], references: [id])
+    creatureSubspecieId Int?
+
+    @@id([creatureSpecieId, creatureTraitId])
+}

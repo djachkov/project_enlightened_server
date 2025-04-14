@@ -1,0 +1,68 @@
+enum Ability {
+    STR
+    DEX
+    CON
+    INT
+    WIS
+    CHA
+}
+
+enum Skill {
+    ACROBATICS
+    ANIMAL_HANDLING
+    ARCANA
+    ATHLETICS
+    DECEPTION
+    HISTORY
+    INSIGHT
+    INTIMIDATION
+    INVESTIGATION
+    MEDICINE
+    NATURE
+    PERCEPTION
+    PERFORMANCE
+    PERSUASION
+    RELIGION
+    SLEIGHT_OF_HAND
+    STEALTH
+    SURVIVAL
+}
+
+enum Alignment {
+    LG
+    NG
+    CG
+    LN
+    N
+    CN
+    LE
+    NE
+    CE
+}
+
+enum CreatureSize {
+    TINY
+    SMALL
+    MEDIUM
+    LARGE
+    HUGE
+    GARGANTUAN
+}
+
+enum ItemType {
+    WEAPON
+    ARMOR
+    TOOL
+    MISC
+}
+
+model Item {
+    id          Int     @id @default(autoincrement())
+    name        String
+    description String
+    item_type   String
+    weight      Float
+    cost        Float
+    magical     Boolean @default(false)
+    quantity    Int?
+}

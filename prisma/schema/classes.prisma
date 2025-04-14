@@ -1,0 +1,67 @@
+enum FeatureType {
+    feat
+    passive
+    active
+    spell
+    reaction
+    bonus_action
+    action
+}
+
+model CharacterClass {
+    id   Int    @id @default(autoincrement())
+    name String
+
+    short_description String
+    homebrew          Boolean    @default(false)
+    subclasses        Subclass[]
+
+    primary_ability_score Ability
+    hit_die               Int
+    saving_throws         String[]
+    skill_proficiency     Skill[]
+    weapon_proficiency    String[]
+    armor_training        String[]
+    equipment             String[] // Item IDs
+
+    // TODO: figure out how to handle this
+    weapon_mastery String[]
+
+    class_features ClassFeature[]
+}
+
+model ClassFeature {
+    id                  Int         @id @default(autoincrement())
+    name                String
+    description         String
+    level               Int
+    feature_type        FeatureType
+    is_subclass_feature Boolean     @default(false)
+    active              Boolean     @default(false)
+
+    rechargable Boolean @default(false)
+    recharge    String? // TODO: enum for recharge types
+    charges     Int? // TODO: enum for charge types
+    duration    String? // TODO: enum for duration types
+
+    effect Json?
+
+    homebrew Boolean @default(false)
+
+    feature_class    CharacterClass @relation(fields: [feature_class_id], references: [id])
+    feature_class_id Int
+
+    feature_subclass Subclass? @relation(fields: [subclassId], references: [id])
+    subclassId       Int?
+}
+
+model Subclass {
+    id   Int    @id @default(autoincrement())
+    name String
+
+    short_description String
+    base_class        CharacterClass @relation(fields: [base_class_id], references: [id])
+    base_class_id     Int
+    homebrew          Boolean        @default(false)
+    subclass_features ClassFeature[]
+}
