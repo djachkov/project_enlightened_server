@@ -3,34 +3,19 @@ from contextlib import asynccontextmanager
 from prisma.models import Character
 from prisma.partials import CharacterCreation
 from app.prisma import db
+from app.routers import classes
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Application Lifespan event manager."""
     await db.connect()
-    # set test character
-    await db.character.create(
-        data={
-            "name": "Testios Maxius",
-            "owner": "GM",
-            "race": "Human",
-            "character_class": "Fighter",
-            "strength": 10,
-            "dexterity": 10,
-            "constitution": 10,
-            "intelligence": 10,
-            "wisdom": 10,
-            "charisma": 10,
-        },
-    )
-
     yield
-    await db.character.delete_many(where={"owner": "GM"})
     await db.disconnect()
 
 
 app = FastAPI(lifespan=lifespan)
+app.include_router(classes.router)
 
 
 @app.get("/", response_model=Character)
@@ -38,7 +23,6 @@ async def root() -> list[Character]:
     """Application root path"""
 
     characters = await db.character.find_many()
-    print(characters)
     return {"characters": characters}
 
 
